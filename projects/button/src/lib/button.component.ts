@@ -1,20 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'lib-button',
-  template: `
-    <p>
-      button works!
-    </p>
-  `,
-  styles: [
-  ]
+  selector: 'ng-codex-lab-button',
+  templateUrl: './button.component.html',
+  styleUrls: ['./button.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ButtonComponent implements OnInit {
+export class ButtonComponent {
 
-  constructor() { }
+  @Input() iconLink: string | undefined;
+  @Input() showIcon = true;
 
-  ngOnInit(): void {
-  }
+  @Input() type = 'white-btn';
+  @Input() isActive = true;
 
+  @Output() isClicked = new EventEmitter();
+
+  constructor() {}
+  executeEvent = () => this.isClicked.emit();
 }

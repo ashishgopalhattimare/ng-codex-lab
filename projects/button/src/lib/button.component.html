@@ -1,0 +1,13 @@
+<button class="{{type}}" appHoverAnimation [isActive]="isActive" [translateY]="0" (click)="executeEvent()">
+  <span class="content">
+    <span *ngIf="showIcon">
+      <img *ngIf="iconLink; else svg" class="left-icon" alt="img" src="{{iconLink}}">
+    </span>
+    <ng-content></ng-content>
+  </span>
+</button>
+<ng-template #svg>
+  <div class="left-icon">
+    <ng-content select="[slot=svg]"></ng-content>
+  </div>
+</ng-template>

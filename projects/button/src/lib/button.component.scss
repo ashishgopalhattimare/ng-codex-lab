@@ -1,0 +1,66 @@
+// Common Button CSS
+button {
+    padding: 8px 16px;
+    border-radius: .35rem;
+  
+    .content {
+      display: flex;
+      align-content: center;
+  
+      .left-icon {
+        margin-right: 12px;
+        display: flex;
+        align-content: center;
+      }
+    }
+  }
+  
+  .dropdown-btn {
+    padding: 8px 8px;
+    border: lightgray 1px solid;
+  
+    &:hover {
+      background-color: rgba(211, 211, 211, 0.23);
+    }
+  
+    &:active {
+      background-color: rgba(211, 211, 211, 0.56);
+    }
+  }
+  
+  .transparent-btn {
+    border: lightgray 1px solid;
+  
+    &:hover {
+      background-color: rgba(211, 211, 211, 0.23);
+    }
+  
+    &:active {
+      background-color: rgba(211, 211, 211, 0.56);
+    }
+  }
+  
+  .white-btn {
+    border: lightgray 1px solid;
+  
+    &:hover {
+      background-color: white;
+    }
+  
+    &:active {
+      background-color: white;
+    }
+  }
+  
+  .certificate-btn {
+    border: black 1px solid;
+    border-radius: 25px;
+  
+    &:hover {
+      background-color: #d2d2d2;
+    }
+  
+    &:active {
+      background-color: #d2d2d2;
+    }
+  }
