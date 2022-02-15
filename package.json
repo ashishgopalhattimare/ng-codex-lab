@@ -6,7 +6,11 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "build:dropdown": "ng build dropdown --prod && cd dist/dropdown && npm pack",
+    "build:button": "ng build button --prod && cd dist/button && npm pack",
+    "build:lib": "npm run build:dropdown && npm run build:button",
+    "gulp:publish": "npm run build:lib && gulp publish"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +33,8 @@
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-replace": "^1.1.3",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~6.1.0",
