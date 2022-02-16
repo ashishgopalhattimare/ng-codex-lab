@@ -1,4 +1,4 @@
-import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
 
 type InputType = string | number;
 
@@ -7,7 +7,7 @@ type InputType = string | number;
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.scss']
 })
-export class DropdownComponent {
+export class DropdownComponent implements OnInit {
 
   @Output() clicked = new EventEmitter < InputType > ();
   @Input() dropdownList: InputType[] = [];
@@ -20,6 +20,9 @@ export class DropdownComponent {
   isHidden = true;
 
   constructor() {}
+  ngOnInit(): void {
+    console.log(this.dropdownList, this.isDefault);
+  }
 
   selectDefaultDropdown(option: InputType, index: number): void {
     this.isHidden = true;
