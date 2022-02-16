@@ -7,9 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "build:dropdown": "ng build dropdown --prod && cd dist/dropdown && npm pack",
+    "build:utility": "ng build utility --prod && cd dist/utility && npm pack",
     "build:button": "ng build button --prod && cd dist/button && npm pack",
-    "build:lib": "npm run build:dropdown && npm run build:button",
+    "build:lib": "npm run build:utility",
     "gulp:publish": "npm run build:lib && gulp publish"
   },
   "private": true,

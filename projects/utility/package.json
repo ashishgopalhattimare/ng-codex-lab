@@ -1,6 +1,6 @@
 {
-  "name": "utility",
-  "version": "0.0.1",
+  "name": "@ng-codex-lab/utility",
+  "version": "1.0.0",
   "peerDependencies": {
     "@angular/common": "^11.2.14",
     "@angular/core": "^11.2.14"

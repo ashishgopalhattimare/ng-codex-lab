@@ -15,13 +15,15 @@ function publishLibrary(source, path, destination) {
     .pipe(dest(destination));
 }
 
+const folders = ['utility'];
+
 /**
  * @Description : Publish all the libraries to exports folder parallely
  * @Task : publish
  */
 async function publish(done) {
 
-    const folders = ['button', 'dropdown'];
+    
     const source = './dist/';
     const libraryRegex = 'ng-codex-lab-*.tgz';
 
@@ -40,7 +42,6 @@ task('task:publish', () => {
     console.log('start publish');
 
     const promise = new Promise(publishDone => {
-        const folders = ['button', 'dropdown'];
         const source = './dist/';
         const libraryRegex = 'ng-codex-lab-*.tgz';
         
