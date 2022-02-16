@@ -29,6 +29,10 @@
       "services": [
         "dist/services/services",
         "dist/services"
+      ],
+      "utility": [
+        "dist/utility/utility",
+        "dist/utility"
       ]
     },
     "importHelpers": true,

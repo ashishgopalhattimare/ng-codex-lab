@@ -162,6 +162,46 @@
           }
         }
       }
+    },
+    "utility": {
+      "projectType": "library",
+      "root": "projects/utility",
+      "sourceRoot": "projects/utility/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/utility/tsconfig.lib.json",
+            "project": "projects/utility/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/utility/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/utility/src/test.ts",
+            "tsConfig": "projects/utility/tsconfig.spec.json",
+            "karmaConfig": "projects/utility/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/utility/tsconfig.lib.json",
+              "projects/utility/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "notifier"
