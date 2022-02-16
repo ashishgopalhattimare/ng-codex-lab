@@ -1,4 +1,4 @@
-<button class="{{type}}" appHoverAnimation [isActive]="isActive" [translateY]="0" (click)="executeEvent()">
+<button class="{{type}}" (click)="executeEvent()">
   <span class="content">
     <span *ngIf="showIcon">
       <img *ngIf="iconLink; else svg" class="left-icon" alt="img" src="{{iconLink}}">
